@@ -11,7 +11,7 @@ createApp({
       apiPath: 'cbs33',    //每個人設定不一樣
       products: [],
       isNew: false,
-      page: {},
+      page: {},            //加上page的空物件
       tempProduct: {
         imagesUrl: [],
       },
