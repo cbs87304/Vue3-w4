@@ -71,7 +71,8 @@ createApp({
         http = 'put'
       }
 
-      axios[http](url, { data: this.tempProduct }).then((response) => {
+      axios[http](url, { data: this.tempProduct })
+      .then((response) => {
         alert(response.data.message);
         productModal.hide();
         this.getData();
@@ -102,7 +103,8 @@ createApp({
       const url = `${this.apiUrl}/api/${this.apiPath}/admin/product/${this.tempProduct.id}`;
 
       axios
-      .delete(url).then((response) => {
+      .delete(url)
+      .then((response) => {
         alert(response.data.message);
         delProductModal.hide();
         this.getData();
@@ -120,4 +122,5 @@ createApp({
   components:{
     pagination,
   },
+  
 }).mount('#app');
