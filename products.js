@@ -124,7 +124,9 @@ createApp({
   
 }).mount('#app');
 
-createApp.component('product-modal', {
-  props: ['tempProduct', 'updateProduct'],
- template: '#product-modal-template',
-});//modal文件, html的75~77行,107~217行
+//modal文件, html的75~77行,107~217行
+
+app.component('productModal', {
+  template: '#productModal',
+  props: ['product', 'isNew'],
+});

@@ -73,9 +73,8 @@
     <div id="productModal" ref="productModal" class="modal fade" tabindex="-1" aria-labelledby="productModalLabel"
       aria-hidden="true">
       <!--HTML模式下單結尾可能會被判斷沒有結尾 <product-modal /> -->
-      <product-modal :temp-product="tempProduct" 
-      :update-product="updateProduct"></product-modal>    <!--雙結尾比較安全-->
-      
+          <!--雙結尾比較安全-->
+      <product-modal ref="product" :product="tempProduct" :is-new="isNew" @update="getData"></product-modal>
    </div>
     <div id="delProductModal" ref="delProductModal" class="modal fade" tabindex="-1"
       aria-labelledby="delProductModalLabel" aria-hidden="true">
