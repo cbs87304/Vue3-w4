@@ -11,7 +11,7 @@ createApp({
       apiPath: 'cbs33',    //每個人設定不一樣
       products: [],
       isNew: false,
-      page: {},            //加上page的空物件
+      pagination: {},            //加上page的空物件
       tempProduct: {
         imagesUrl: [],
       },
@@ -55,7 +55,7 @@ createApp({
       .get(url)
       .then((response) => {
         this.products = response.data.products;//取得產品資料
-        this.page = response.data.pagination; //分頁資料存取 ,外層page
+        this.papagination = response.data.pagination; //分頁資料存取 ,外層page
       })
       .catch((err) => {
         alert(err.response.data.message);
@@ -122,5 +122,5 @@ createApp({
   components:{
     pagination,
   },
-  
+
 }).mount('#app');
