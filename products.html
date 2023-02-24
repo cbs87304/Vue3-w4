@@ -64,10 +64,9 @@
           </tr>
         </tbody>
       </table>
-      <!--外傳內 props 和 emit-->
+      <!--外傳內 props 和 emit寫法：@change-page="getProducts"-->
         <pagination :pages="page"
-        :get-data="getData"
-        :change-page="getData">
+        :get-data="getData">    
        </pagination>  <!-- 前內=後外 -->
     </div>
     <!-- Modal -->

@@ -123,5 +123,5 @@ createApp({
     pagination,
   },
 
-  
+  // pagination 也可使用全域註冊：app.component("pagination", pagination);
 }).mount('#app');

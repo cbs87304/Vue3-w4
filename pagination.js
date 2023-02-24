@@ -6,7 +6,7 @@ export default{
       <li class="page-item"
       :class="{ disabled: !pages.has_pre }">
         <a class="page-link" href="#" aria-label="Previous"
-        @click="getData(pages.current_page - 1)">
+        @click.prevent="getData(pages.current_page - 1)">
           <span aria-hidden="true">&laquo;</span>
         </a>
       </li>
@@ -15,13 +15,13 @@ export default{
       :class="{ active: page === pages.current_page }"
       v-for="page in pages.total_pages" :key="page + 'page'">
       <a class="page-link" href="#"
-      @click.prevent="$emit('change-page', page)">{{ page }}</a>
+      @click.prevent="getData(page)">{{ page }}</a>
       </li>
 
       <li class="page-item"
       :class="{ disabled: !pages.has_next }">
         <a class="page-link" href="#" aria-label="Next"
-        @click="getData(pages.current_page + 1)">
+        @click.prevent="getData(pages.current_page + 1)">
           <span aria-hidden="true">&raquo;</span>
         </a>
       </li>
