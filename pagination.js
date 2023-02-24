@@ -24,6 +24,7 @@ export default{
           <span aria-hidden="true">&raquo;</span>
         </a>
       </li>
+      
   </ul>
   </nav>`  //bootstrap5網站 > components > pagination(各種分頁程式碼)
 } 
