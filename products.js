@@ -121,3 +121,8 @@ createApp({
     pagination,
   },
 }).mount('#app');
+
+app.component('product-modal', {
+  props: ['tempProduct', 'updateProduct'],
+ template: '#product-modal-template',
+});//modal文件, html的75~77行,107~217行
