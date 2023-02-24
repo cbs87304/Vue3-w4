@@ -4,6 +4,11 @@ import pagination from './pagination.js';
 let productModal = null;
 let delProductModal = null;
 
+app.component('product-modal', {
+  props: ['tempProduct', 'updateProduct'],
+ template: '#product-modal-template',
+});//modal文件, html的75~77行,107~217行
+
 createApp({
   data() {
     return {
@@ -120,9 +125,6 @@ createApp({
   components:{
     pagination,
   },
+
 }).mount('#app');
 
-app.component('product-modal', {
-  props: ['tempProduct', 'updateProduct'],
- template: '#product-modal-template',
-});//modal文件, html的75~77行,107~217行
