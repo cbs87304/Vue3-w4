@@ -123,10 +123,3 @@ createApp({
   
   
 }).mount('#app');
-
-//modal文件, html的75~77行,107~217行
-
-app.component('productModal', {
-  template: '#productModal',
-  props: ['product', 'isNew'],
-});
