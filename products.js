@@ -55,7 +55,7 @@ createApp({
       .get(url)
       .then((response) => {
         this.products = response.data.products;//取得產品資料
-        this.page = response.data.page; //分頁資料存取 ,外層page
+        this.page = response.data.pagination; //分頁資料存取 ,外層page
       })
       .catch((err) => {
         alert(err.response.data.message);
