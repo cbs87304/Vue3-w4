@@ -120,6 +120,4 @@ createApp({
   components:{
     pagination,
   },
-  
-  
 }).mount('#app');
