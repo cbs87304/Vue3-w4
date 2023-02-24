@@ -11,10 +11,11 @@ createApp({
       apiPath: 'cbs33',    //每個人設定不一樣
       products: [],
       isNew: false,
+      page: {},
       tempProduct: {
         imagesUrl: [],
       },
-    }
+    };
   },
   mounted() {
     productModal = new bootstrap.Modal(document.getElementById('productModal'), {
@@ -47,12 +48,14 @@ createApp({
         })
     },
     //渲染產品資料庫至畫面
-    getData() { 
-      const url = `${this.apiUrl}/api/${this.apiPath}/admin/products/all`;
+    getData(page = 1) { // page=1 參數預設為第1頁
+      const url = `${this.apiUrl}/api/${this.apiPath}/admin/products/?page=${page}`;//改渲染分頁資料
       
       axios
-      .get(url).then((response) => {
+      .get(url)
+      .then((response) => {
         this.products = response.data.products;//取得產品資料
+        this.page = response.data.pagination; //分頁資料存取 ,外層page
       })
       .catch((err) => {
         alert(err.response.data.message);
